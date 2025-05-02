@@ -7,6 +7,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
+  default = "my_new"
   description = "my_new"
 }
 
