@@ -1,6 +1,6 @@
 resource "aws_ebs_volume" "data" {
   availability_zone = "us-east-1a"
-  size              = 8
+  size              = 30
   type              = "gp2"
 
   tags = {
