@@ -7,7 +7,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  description = "Nom de la clé SSH"
+  description = "my_new"
 }
 
 variable "instance_name" {
