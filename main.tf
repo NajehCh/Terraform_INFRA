@@ -28,6 +28,15 @@ module "compute" {
   key_name            = var.key_name
   instance_name       = var.instance_name
 }
+module "nodejs_instance" {
+  source            = "./modules/compute"
+  subnet_id         = module.network.subnet_id
+  security_group_id = module.network.security_group_id
+  ami_id            = data.aws_ami.ubuntu.id
+  instance_type     = var.instance_type
+  key_name          = var.key_name
+  instance_name     = "NodeJS-Instance"
+}
 
 module "storage" {
   source      = "./modules/storage"
