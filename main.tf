@@ -20,22 +20,23 @@ module "network" {
 }
 
 module "compute" {
-  source              = "./modules/compute"
+  source              = "./modules/compute/compute_jenkins"
   subnet_id           = module.network.subnet_id
   security_group_id   = module.network.security_group_id
   ami_id              = data.aws_ami.ubuntu.id
   instance_type       = var.instance_type
   key_name            = var.key_name
   instance_name       = var.instance_name
+
 }
 module "nodejs_instance" {
-  source            = "./modules/compute"
+  source            = "./modules/compute/compute_nodejs"
   subnet_id         = module.network.subnet_id
   security_group_id = module.network.security_group_id
   ami_id            = data.aws_ami.ubuntu.id
   instance_type     = var.instance_type
   key_name          = var.key_name
-  instance_name     = "NodeJS-Instance"
+  instance_name     = var.instance_name_nodejs
 }
 
 module "storage" {

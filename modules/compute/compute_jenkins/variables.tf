@@ -17,9 +17,8 @@ variable "subnet_id" {
 variable "security_group_id" {
   
 }
+
 variable "instance_name" {
-  
-}
-variable "instance_name_nodejs" {
-  default = "NodeJS-Instance"
+  description = "Name tag for the Node.js instance"
+  type        = string
 }

@@ -14,3 +14,7 @@ variable "key_name" {
 variable "instance_name" {
   default = "my-ec2-instance"
 }
+variable "instance_name_nodejs" {
+  type        = string
+  description = "Nom de l'instance NodeJS"
+}
