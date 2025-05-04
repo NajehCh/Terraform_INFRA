@@ -27,7 +27,6 @@ module "compute" {
   instance_type       = var.instance_type
   key_name            = var.key_name
   instance_name       = var.instance_name
-
 }
 module "nodejs_instance" {
   source            = "./modules/compute/compute_nodejs"

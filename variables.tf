@@ -16,5 +16,5 @@ variable "instance_name" {
 }
 variable "instance_name_nodejs" {
   type        = string
-  description = "Nom de l'instance NodeJS"
+  default     = "NodeJS-Instance"
 }
