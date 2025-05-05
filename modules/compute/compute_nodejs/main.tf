@@ -17,6 +17,5 @@ resource "aws_instance" "nodejs_instance" {
               sudo apt install -y curl
               curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
               sudo apt install -y nodejs
-              echo "Node.js is installed" > /home/ubuntu/index.js
               EOF
 }

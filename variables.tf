@@ -3,7 +3,7 @@ variable "AWS_REGION" {
 }
 
 variable "instance_type" {
-  default = "t3.medium"
+  default = "t2.medium"
 }
 
 variable "key_name" {
