@@ -1,3 +1,6 @@
+resource "aws_eip" "jenkins_eip" {
+  instance = aws_instance.nodejs_instance.id
+}
 
 resource "aws_instance" "nodejs_instance" {
   ami                         = var.ami_id
