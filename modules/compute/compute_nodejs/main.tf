@@ -1,4 +1,4 @@
-resource "aws_eip" "jenkins_eip" {
+resource "aws_eip" "nodejs_eip" {
   instance = aws_instance.nodejs_instance.id
 }
 
@@ -19,6 +19,8 @@ resource "aws_instance" "nodejs_instance" {
               sudo apt update -y
               sudo apt install -y curl
               curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-              sudo apt install -y nodejs
+              sudo apt update
+              sudo apt install -y git nodejs npm
+              npm install -g pm2              
               EOF
 }
