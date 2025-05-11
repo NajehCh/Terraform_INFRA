@@ -18,3 +18,7 @@ variable "instance_name_nodejs" {
   type        = string
   default     = "NodeJS-Instance"
 }
+variable "instance_name_client" {
+  type        = string
+  default     = "Client-Instance"
+}

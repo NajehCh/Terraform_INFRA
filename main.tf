@@ -37,6 +37,15 @@ module "nodejs_instance" {
   key_name          = var.key_name
   instance_name     = var.instance_name_nodejs
 }
+module "nodejs_instance" {
+  source            = "./modules/compute/compute_client"
+  subnet_id         = module.network.subnet_id
+  security_group_id = module.network.security_group_id
+  ami_id            = data.aws_ami.ubuntu.id
+  instance_type     = var.instance_type
+  key_name          = var.key_name
+  instance_name     = var.instance_name_client
+}
 
 module "storage" {
   source      = "./modules/storage"
