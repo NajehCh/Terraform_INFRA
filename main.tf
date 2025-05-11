@@ -37,7 +37,7 @@ module "nodejs_instance" {
   key_name          = var.key_name
   instance_name     = var.instance_name_nodejs
 }
-module "nodejs_instance" {
+module "client_instance" {
   source            = "./modules/compute/compute_client"
   subnet_id         = module.network.subnet_id
   security_group_id = module.network.security_group_id
